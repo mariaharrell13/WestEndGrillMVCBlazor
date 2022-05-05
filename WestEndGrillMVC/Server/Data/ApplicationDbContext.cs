@@ -17,5 +17,10 @@ namespace WestEndGrillMVC.Server.Data
             IOptions<OperationalStoreOptions> operationalStoreOptions) : base(options, operationalStoreOptions)
         {
         }
+
+        public DbSet<Guest> Guests { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<PickUp> PickUps { get; set; }
+        public DbSet<Reservation> Reservations { get; set; }
     }
 }

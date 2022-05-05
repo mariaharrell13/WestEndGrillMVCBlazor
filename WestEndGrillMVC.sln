@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32414.318
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WestEndGrillMVC.Server", "WestEndGrillMVC\Server\WestEndGrillMVC.Server.csproj", "{EC268FAD-663A-4979-B584-1717AC6666D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WestEndGrillMVC.Server", "WestEndGrillMVC\Server\WestEndGrillMVC.Server.csproj", "{EC268FAD-663A-4979-B584-1717AC6666D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WestEndGrillMVC.Client", "WestEndGrillMVC\Client\WestEndGrillMVC.Client.csproj", "{3C4D6770-0303-49CB-B8F9-75F728FA8787}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WestEndGrillMVC.Client", "WestEndGrillMVC\Client\WestEndGrillMVC.Client.csproj", "{3C4D6770-0303-49CB-B8F9-75F728FA8787}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WestEndGrillMVC.Shared", "WestEndGrillMVC\Shared\WestEndGrillMVC.Shared.csproj", "{7B8B18E1-B9CE-4EBC-912B-67F3BFEDD462}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WestEndGrillMVC.Shared", "WestEndGrillMVC\Shared\WestEndGrillMVC.Shared.csproj", "{7B8B18E1-B9CE-4EBC-912B-67F3BFEDD462}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
