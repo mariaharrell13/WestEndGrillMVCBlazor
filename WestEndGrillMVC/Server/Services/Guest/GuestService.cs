@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using WestEndGrillMVC.Server.Data;
 using WestEndGrillMVC.Shared.Models.Guest;
+using WestEndGrillMVC.Server.Models;
+
 
 namespace WestEndGrillMVC.Server.Services.Guest
 {
@@ -17,7 +19,7 @@ namespace WestEndGrillMVC.Server.Services.Guest
                 FirstName = _userId, //owner/user
                 GuestId = model.GuestId,
                 FistName = model.FirstName,
-                LastName = model.Lastname,
+                LastName = model.LastName,
                 PhoneNumber = model.PhoneNumber,
                 CreatedUtc = DateTimeOffset.Now,
                 
@@ -27,6 +29,7 @@ namespace WestEndGrillMVC.Server.Services.Guest
 
             return numberOfChanges == 1;
         }
+
 
         public async Task<bool> DeleteGuestAsync(int guestId)
         {
