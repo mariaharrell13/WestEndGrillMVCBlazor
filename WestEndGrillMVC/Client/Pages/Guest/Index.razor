@@ -1,0 +1,50 @@
+﻿@page "/guest"
+@using Microsoft.AspNetCore.Authorization
+@using WestEndGrillMVC.Shared.Models.Guest
+@inject HttpClient Http
+@attribute [Authorize]
+
+<h3>Guests</h3>
+
+<a href="/guest/create">Create a guest</a>
+
+@if (_guests == null)
+{
+	<p><em>Loading...</em></p>
+}
+else
+{
+	<table class="table">
+	<thead>
+		<tr>
+			<th>FirstName</th>
+			<th>&nbsp;</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var guest in _guests)
+		{
+			<tr>
+				<td><strong>@guest.FirstName</strong></td>
+				<td>
+					<a href=@($"guest/{guest.GuestId}")>Details</a>
+					<a href=@($"guest/edit/{guest.GuestId}")>Edit</a>
+					<a href=@($"guest/delete/{guest.GuestId}")>Delete</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
+}
+
+
+
+@code 
+{
+	private IEnumerable<GuestListItem> _guests;
+
+	protected override async Task OnInitializedAsync()
+	{
+		_guests = await Http.GetFromJsonAsync<List<GuestListItem>>("/api/guest");
+	}
+}

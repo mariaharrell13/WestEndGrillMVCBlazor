@@ -17,7 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\Guest\" />
     <Folder Include="Pages\Reservation\" />
     <Folder Include="Pages\PickUp\" />
     <Folder Include="Pages\Order\" />

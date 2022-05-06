@@ -1,0 +1,54 @@
+﻿@page "/guest/create"
+@using Microsoft.AspNetCore.Authorization
+@using WestEndGrillMVC.Shared.Models.Guest
+@attribute [Authorize]
+@inject HttpClient http
+@using WestEndGrillMVC.Shared.Models.Order
+@using WestEndGrillMVC.Shared.Models.PickUp
+@using WestEndGrillMVC.Shared.Models.Reservation
+@inject NavigationManager naviagation
+
+<h3>Create</h3>
+
+<div class="container">
+	<EditForm Model="@model" OnValidSubmit="@HandleSubmit">
+		<DataAnnotationsValidator />
+		<ValidationSummary />
+	</EditForm>
+</div>
+<div class="form-group">
+	<label>First Name</label>
+	<InputText class="form-control" @bind-Value="model.FirstName" />
+</div>
+<div class="form-group">
+	<label>Last Name</label>
+	<InputText class="form-control" @bind-Value="model.LastName" />
+</div>
+<div class="form-group">
+	<label>Phone Number</label>
+	<InputNumber class="form-control" @bind-Value="model.PhoneNumber" />
+</div>
+<button type="submit" class="btn btn-primary btn-block mt-5">Submit</button>
+
+@if (errorMessage != null)
+{
+	<h5 class="text-danger">@errorMessage</h5>
+}
+@code
+{
+	private GuestCreate model = new();
+	private string errorMessage;
+
+	private async void HandleSubmit()
+	{
+		var createRes = await http.PostAsJsonAsync<GuestCreate>("/api/guest", model);
+		if (createRes.IsSuccessStatusCode)
+		{
+			navigation.NavigateTo("/guest");
+		}
+		else
+		{
+			errorMessage = "Could not create the guest right now. Please try again later.";
+		}
+	}
+}
