@@ -10,7 +10,7 @@ namespace WestEndGrillMVC.Shared.Models.Guest
     {
         public int GuestId { get; set; }
         public string FirstName { get; set; }
-        public string Lastname { get; set; }
+        public string LastName { get; set; }
         public int PhoneNumber { get; set; }
     }
 }

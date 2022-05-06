@@ -8,7 +8,7 @@ namespace WestEndGrillMVC.Shared.Models.PickUp
 {
     public class PickUpListItem
     {
-        public DateTime DateTime { get; set; }
+        public DateTime TimeOfDay { get; set; }
         public string PickUpName { get; set; }
     }
 }

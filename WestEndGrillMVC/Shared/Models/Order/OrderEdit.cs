@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WestEndGrillMVC.Shared.Models.Order
 {
-    internal class OrderEdit
+    public class OrderEdit
     {
         [Required]
         public int OrderId { get; set; }

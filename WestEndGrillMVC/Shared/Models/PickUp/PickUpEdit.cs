@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace WestEndGrillMVC.Shared.Models.PickUp
 {
-    internal class PickUpEdit
+    public class PickUpEdit
     {
         [Required]
         public int PickUpId { get; set; }
         [Required]
-        public DateTime DateTime { get; set; }
+        public DateTime TimeOfDay { get; set; }
         [Required]
         public string PickUpName { get; set; }
         public int GuestId { get; set; }

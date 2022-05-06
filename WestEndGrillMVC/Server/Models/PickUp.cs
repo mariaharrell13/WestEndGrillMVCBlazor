@@ -9,7 +9,7 @@ namespace WestEndGrillMVC.Server.Models
         [Key]
         public int PickUpId { get; set; }
         [Required]
-        public DateTime DateTime { get; set; }
+        public DateTime TimeOfDay { get; set; }
         [Required]
         public string PickUpName { get; set; }
         [ForeignKey("Guest")]

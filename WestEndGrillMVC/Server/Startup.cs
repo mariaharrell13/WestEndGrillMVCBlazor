@@ -10,6 +10,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using WestEndGrillMVC.Server.Data;
 using WestEndGrillMVC.Server.Models;
+using WestEndGrillMVC.Server.Services.Guest;
+using WestEndGrillMVC.Server.Services.Order;
+using WestEndGrillMVC.Server.Services.PickUp;
+using WestEndGrillMVC.Server.Services.Reservation;
 
 namespace WestEndGrillMVC.Server
 {
@@ -43,6 +47,10 @@ namespace WestEndGrillMVC.Server
 
             services.AddControllersWithViews();
             services.AddRazorPages();
+            services.AddScoped<IGuestService, GuestService>();
+            services.AddScoped<IOrderService, OrderService>();
+            services.AddScoped<IPickUpService, PickUpService>();
+            services.AddScoped<IReservationService, ReservationService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

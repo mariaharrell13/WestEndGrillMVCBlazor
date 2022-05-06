@@ -13,7 +13,7 @@ namespace WestEndGrillMVC.Shared.Models.Reservation
         [Required]
         public int NumberOfGuests { get; set; }
         [Required]
-        public DateTime DateTime { get; set; }
+        public DateTime TimeOfDay { get; set; }
         [Required]
         public string PartyName { get; set; }
         public int GuestId { get; set; }

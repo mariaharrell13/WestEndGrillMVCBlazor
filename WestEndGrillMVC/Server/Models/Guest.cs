@@ -9,8 +9,9 @@ namespace WestEndGrillMVC.Server.Models
         [Required]
         public string FirstName { get; set; }
         [Required]
-        public string Lastname { get; set; }
+        public string LastName { get; set; }
         [Required]
         public int PhoneNumber { get; set; }
     }
 }
+ 

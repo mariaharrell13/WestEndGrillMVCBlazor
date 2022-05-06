@@ -11,7 +11,7 @@ namespace WestEndGrillMVC.Server.Models
         [Required]
         public int NumberOfGuests { get; set; }
         [Required]
-        public DateTime DateTime { get; set; }
+        public DateTime TimeOfDay { get; set; }
         [Required]
         public string PartyName { get; set; }
         [ForeignKey("Guest")]
